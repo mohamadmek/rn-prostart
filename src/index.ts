@@ -6,7 +6,7 @@ const path = require("path");
 
 const program = new Command();
 
-console.log(figlet.textSync("QuickStart"));
+console.log(figlet.textSync("ProStart"));
 
 program
   .version("0.0.1")
