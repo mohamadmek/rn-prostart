@@ -11,8 +11,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Mohamad Meksasi",
   "license": "ISC",
+  "repository": "https://github.com/mohamadmek/rn-quickstart",
+  "homepage": "https://github.com/mohamadmek/rn-quickstart#readme",
   "dependencies": {
     "commander": "^12.1.0",
     "figlet": "^1.8.0"
