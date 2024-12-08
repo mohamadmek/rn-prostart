@@ -9,7 +9,7 @@
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --write .",
+    "check-format": "prettier --write .",
     "check-exports": "attw --pack .",
     "ci": "yarn build && yarn check-format && yarn check-exports",
     "local-release": "changeset version && changeset publish",
