@@ -1,18 +1,33 @@
-name: "publish package to npm"
+name: CI
 
-on: push
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  publish:
+  ci:
     runs-on: ubuntu-latest
+
     steps:
-      - name: checkout
-        uses: actions/checkout@v2
-      - name: node
-        uses: actions/setup-node@v2
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: 16
-          registry-url: https://registry.npmjs.org
+          node-version: '20'
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Run CI
+        run: npm run ci
+
       - name: publish
         run: npm publish --access public
         env:
