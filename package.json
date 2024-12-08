@@ -1,10 +1,10 @@
 {
-  "name": "rn-quickstart",
+  "name": "rn-prostart",
   "version": "0.0.1",
   "description": "",
   "main": "dist/index.js",
   "bin": {
-    "rn-quickstart": "./dist/index.js"
+    "rn-prostart": "./dist/index.js"
   },
   "scripts": {
     "build": "npx tsc",
