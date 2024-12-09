@@ -24,7 +24,7 @@ jobs:
       - name: Run CI
         run: yarn ci
 
-      # - name: publish
-      #   run: npm publish --access public
-      #   env:
-      #     NPM_CONFIG_TOKEN: ${{secrets.NPMAUTHTOKEN}}
+      - name: publish
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPMAUTHTOKEN}}
